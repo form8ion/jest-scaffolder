@@ -1,3 +1,7 @@
-// remark-usage-ignore-next
-/* eslint-disable-next-line no-unused-vars */
-import jestScaffolder from './lib/index.cjs';
+import {scaffold} from './lib/index.cjs';
+
+async function example() {
+  await scaffold();
+}
+
+example();

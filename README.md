@@ -36,7 +36,13 @@ $ npm install @form8ion/jest-scaffolder --save-prod
 ### Example
 
 ```javascript
-import jestScaffolder from '@form8ion/jest-scaffolder';
+import {scaffold} from '@form8ion/jest-scaffolder';
+
+async function example() {
+  await scaffold();
+}
+
+example();
 ```
 
 ## Contributing
