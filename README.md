@@ -33,6 +33,12 @@ opinionated scaffolder for [Jest](https://jestjs.io)
 $ npm install @form8ion/jest-scaffolder --save-prod
 ```
 
+### Features
+
+* Includes [jest-when](https://www.npmjs.com/package/jest-when) since the mocks
+  built into [Jest](https://jestjs.io) [do not enable conditional returns](https://github.com/facebook/jest/issues/6180)
+  and can encourage behavior that relies on side effects
+
 ### Example
 
 ```javascript
