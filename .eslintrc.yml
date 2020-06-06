@@ -1,3 +1,9 @@
 extends:
   - '@form8ion'
-  - '@form8ion/mocha'
+
+overrides:
+  - files: src/**/*.test.js
+    globals:
+      describe: readonly
+      it: readonly
+      expect: readonly

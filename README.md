@@ -12,6 +12,7 @@ opinionated scaffolder for [Jest](https://jestjs.io)
 
 * [Usage](#usage)
   * [Installation](#installation)
+  * [Features](#features)
   * [Example](#example)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
