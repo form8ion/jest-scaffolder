@@ -1,9 +1,3 @@
 extends:
   - '@form8ion'
-
-overrides:
-  - files: src/**/*.test.js
-    globals:
-      describe: readonly
-      it: readonly
-      expect: readonly
+  - '@form8ion/jest'
