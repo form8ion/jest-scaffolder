@@ -1,7 +1,13 @@
+// #### Import
+// remark-usage-ignore-next
+import stubbedFs from 'mock-fs';
 import {scaffold} from './lib/index.cjs';
 
-async function example() {
-  await scaffold();
-}
+// remark-usage-ignore-next
+stubbedFs();
 
-example();
+// #### Execute
+
+(async function example() {
+  await scaffold({projectRoot: process.cwd()});
+}());

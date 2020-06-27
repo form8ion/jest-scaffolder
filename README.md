@@ -14,6 +14,8 @@ opinionated scaffolder for [Jest](https://jestjs.io)
   * [Installation](#installation)
   * [Features](#features)
   * [Example](#example)
+    * [Import](#import)
+    * [Execute](#execute)
 * [Contributing](#contributing)
   * [Dependencies](#dependencies)
   * [Verification](#verification)
@@ -42,14 +44,18 @@ $ npm install @form8ion/jest-scaffolder --save-prod
 
 ### Example
 
+#### Import
+
 ```javascript
 import {scaffold} from '@form8ion/jest-scaffolder';
+```
 
-async function example() {
-  await scaffold();
-}
+#### Execute
 
-example();
+```javascript
+(async function example() {
+  await scaffold({projectRoot: process.cwd()});
+}());
 ```
 
 ## Contributing
