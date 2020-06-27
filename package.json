@@ -5,7 +5,8 @@
   "version": "0.0.0-semantically-released",
   "files": [
     "example.js",
-    "lib/"
+    "lib/",
+    "templates/"
   ],
   "publishConfig": {
     "access": "public"
@@ -35,7 +36,7 @@
     "prepack": "run-s build",
     "test:unit": "nyc run-s test:unit:base",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test:unit:base": "DEBUG=any mocha 'src/**/*-test.js'",
+    "test:unit:base": "DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$",
     "lint:peer": "npm ls >/dev/null"
   },
   "devDependencies": {
@@ -43,17 +44,18 @@
     "@form8ion/babel-preset": "1.6.22",
     "@form8ion/commitlint-config": "1.0.9",
     "@form8ion/eslint-config": "1.6.17",
-    "@form8ion/eslint-config-mocha": "1.2.8",
+    "@form8ion/eslint-config-jest": "1.0.0-alpha.1",
     "@form8ion/remark-lint-preset": "1.0.6",
     "@travi/any": "2.0.9",
     "@travi/travis-lint": "1.0.1",
     "ban-sensitive-files": "1.9.7",
-    "chai": "4.2.0",
     "codecov": "3.7.0",
     "cz-conventional-changelog": "3.2.0",
     "husky": "4.2.5",
+    "jest": "^26.0.1",
+    "jest-when": "2.7.2",
     "lockfile-lint": "4.3.6",
-    "mocha": "7.2.0",
+    "mock-fs": "^4.12.0",
     "npm-run-all": "4.1.5",
     "nyc": "15.0.1",
     "remark-cli": "8.0.0",
@@ -61,7 +63,9 @@
     "remark-usage": "8.0.0",
     "rimraf": "3.0.2",
     "rollup": "2.10.9",
-    "rollup-plugin-auto-external": "2.0.0",
-    "sinon": "9.0.2"
+    "rollup-plugin-auto-external": "2.0.0"
+  },
+  "dependencies": {
+    "make-dir": "3.1.0"
   }
 }
