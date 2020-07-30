@@ -44,7 +44,7 @@
     "@form8ion/babel-preset": "1.6.27",
     "@form8ion/commitlint-config": "1.0.11",
     "@form8ion/eslint-config": "1.6.25",
-    "@form8ion/eslint-config-jest": "1.0.7",
+    "@form8ion/eslint-config-jest": "1.0.8",
     "@form8ion/remark-lint-preset": "1.0.9",
     "@travi/any": "2.0.10",
     "@travi/travis-lint": "1.0.1",
