@@ -15,6 +15,7 @@ describe('scaffolder', () => {
   it('scaffolds jest', async () => {
     const projectRoot = any.string();
     const pathToCreatedSrcDirectory = any.string();
+    const eslintConfigs = ['jest'];
     when(makeDir.default).calledWith(`${projectRoot}/src`).mockResolvedValue(pathToCreatedSrcDirectory);
 
     const results = await scaffold({projectRoot});
@@ -26,7 +27,8 @@ describe('scaffolder', () => {
     expect(results).toEqual({
       devDependencies: ['jest', 'jest-when'],
       scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
-      eslintConfigs: ['jest'],
+      eslintConfigs,
+      eslint: {configs: eslintConfigs},
       nextSteps: [{summary: 'Remove the canary test for jest once more valuable tests exist'}]
     });
   });
