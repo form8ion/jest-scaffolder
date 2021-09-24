@@ -25,6 +25,7 @@ describe('scaffolder', () => {
       `${pathToCreatedSrcDirectory}/canary.test.js`
     );
     expect(results).toEqual({
+      testFilenamePattern: 'src/**/*.test.js',
       devDependencies: ['jest', 'jest-when'],
       scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
       eslintConfigs,
