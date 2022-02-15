@@ -44,7 +44,7 @@
     "@form8ion/babel-preset": "1.6.81",
     "@form8ion/commitlint-config": "1.0.29",
     "@form8ion/eslint-config": "2.0.3",
-    "@form8ion/eslint-config-jest": "1.0.52",
+    "@form8ion/eslint-config-jest": "1.0.53",
     "@form8ion/remark-lint-preset": "2.1.7",
     "@travi/any": "2.0.19",
     "ban-sensitive-files": "1.9.17",
