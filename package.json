@@ -47,7 +47,7 @@
     "@form8ion/eslint-config-jest": "1.0.53",
     "@form8ion/remark-lint-preset": "2.1.7",
     "@travi/any": "2.0.20",
-    "ban-sensitive-files": "1.9.17",
+    "ban-sensitive-files": "1.9.18",
     "codecov": "3.8.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "7.0.4",
