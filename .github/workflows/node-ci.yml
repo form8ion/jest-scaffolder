@@ -27,10 +27,7 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
       - uses: bahmutov/npm-install@v1
       - run: npm test
-      - name: Upload coverage data to Codecov
-        run: npm run coverage:report
-  release:
-    needs: verify
+      - uses: codecov/codecov-action@v2
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
