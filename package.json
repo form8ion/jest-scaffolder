@@ -51,7 +51,7 @@
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "husky": "8.0.1",
-    "jest": "28.1.1",
+    "jest": "28.1.2",
     "jest-when": "3.5.1",
     "lockfile-lint": "4.7.5",
     "mock-fs": "5.1.2",
