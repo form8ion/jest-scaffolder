@@ -45,7 +45,7 @@
     "@form8ion/eslint-config": "5.0.24",
     "@form8ion/eslint-config-jest": "1.0.91",
     "@form8ion/remark-lint-preset": "5.0.0",
-    "@travi/any": "2.1.6",
+    "@travi/any": "2.1.7",
     "ban-sensitive-files": "1.9.18",
     "c8": "7.12.0",
     "cross-env": "7.0.3",
