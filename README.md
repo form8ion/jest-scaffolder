@@ -6,6 +6,7 @@ opinionated scaffolder for [Jest](https://jestjs.io)
 
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 ![SLSA Level 2][slsa-badge]
+[![Codecov][coverage-badge]][coverage-link]
 
 <!--status-badges end -->
 
@@ -121,3 +122,7 @@ $ npm test
 [github-actions-ci-badge]: https://github.com/form8ion/jest-scaffolder/workflows/Node.js%20CI/badge.svg
 
 [slsa-badge]: https://slsa.dev/images/gh-badge-level2.svg
+
+[coverage-link]: https://codecov.io/github/form8ion/jest-scaffolder
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/jest-scaffolder?logo=codecov
