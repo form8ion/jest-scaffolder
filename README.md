@@ -7,6 +7,7 @@ opinionated scaffolder for [Jest](https://jestjs.io)
 [![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 ![SLSA Level 2][slsa-badge]
 [![Codecov][coverage-badge]][coverage-link]
+[![OpenSSF Scorecard][ossfScorecard-badge]][ossfScorecard-link]
 
 <!--status-badges end -->
 
@@ -126,3 +127,7 @@ $ npm test
 [coverage-link]: https://codecov.io/github/form8ion/jest-scaffolder
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/form8ion/jest-scaffolder?logo=codecov
+
+[ossfScorecard-link]: https://securityscorecards.dev/viewer/?uri=github.com/form8ion/jest-scaffolder
+
+[ossfScorecard-badge]: https://api.securityscorecards.dev/projects/github.com/form8ion/jest-scaffolder/badge
