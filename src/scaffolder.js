@@ -1,6 +1,7 @@
 import {promises as fs} from 'fs';
 import path from 'path';
-import makeDir from '../thirdparty-wrappers/make-dir';
+
+import makeDir from '../thirdparty-wrappers/make-dir.js';
 
 export default async function ({projectRoot}) {
   const eslintConfigs = ['jest'];
