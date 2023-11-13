@@ -9,7 +9,8 @@
     "templates/"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "runkitExampleFilename": "./example.js",
   "main": "lib/index.cjs.js",
