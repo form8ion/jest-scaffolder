@@ -52,7 +52,7 @@
     "@form8ion/eslint-config-jest": "1.0.114",
     "@form8ion/remark-lint-preset": "6.0.4",
     "@travi/any": "3.1.2",
-    "ban-sensitive-files": "1.10.5",
+    "ban-sensitive-files": "1.10.6",
     "c8": "10.1.2",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
