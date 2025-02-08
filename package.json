@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@babel/register": "7.25.9",
-    "@form8ion/babel-preset": "1.6.141",
+    "@form8ion/babel-preset": "1.6.142",
     "@form8ion/commitlint-config": "2.0.4",
     "@form8ion/eslint-config": "7.0.12",
     "@form8ion/eslint-config-jest": "1.0.117",
