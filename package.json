@@ -30,7 +30,8 @@
     "test:unit:base": "DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$",
     "lint:peer": "npm ls >/dev/null",
     "prepare": "husky install",
-    "lint:publish": "publint"
+    "lint:publish": "publint",
+    "lint:js:fix": "run-s 'lint:js -- --fix'"
   },
   "files": [
     "example.js",
