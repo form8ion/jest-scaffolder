@@ -1,34 +1,42 @@
-import {promises as fs} from 'fs';
-import path from 'path';
+import path, {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 import any from '@travi/any';
 import {when} from 'jest-when';
+import {beforeEach, describe, expect, it, jest} from '@jest/globals';
 
-import * as makeDir from '../thirdparty-wrappers/make-dir.js';
-import scaffold from './scaffolder.js';
+const __dirname = dirname(fileURLToPath(import.meta.url));          // eslint-disable-line no-underscore-dangle
+
+jest.unstable_mockModule('node:fs', () => ({
+  promises: {
+    copyFile: jest.fn(),
+    mkdir: jest.fn()
+  }
+}));
 
 describe('scaffolder', () => {
-  beforeEach(() => {
-    jest.spyOn(makeDir, 'default');
-    jest.spyOn(fs, 'copyFile');
-    fs.copyFile.mockImplementation(() => Promise.resolve());
+  let scaffold, fs;
+
+  beforeEach(async () => {
+    ({default: scaffold} = await import('./scaffolder.js'));
+    ({promises: fs} = await import('node:fs'));
   });
 
   it('scaffolds jest', async () => {
     const projectRoot = any.string();
     const pathToCreatedSrcDirectory = any.string();
     const eslintConfigs = ['jest'];
-    when(makeDir.default).calledWith(`${projectRoot}/src`).mockResolvedValue(pathToCreatedSrcDirectory);
+    when(fs.mkdir).calledWith(`${projectRoot}/src`, {recursive: true}).mockResolvedValue(pathToCreatedSrcDirectory);
 
     const results = await scaffold({projectRoot});
 
     expect(fs.copyFile).toHaveBeenCalledWith(
       path.resolve(__dirname, '..', 'templates', 'canary.test.js'),
-      `${pathToCreatedSrcDirectory}/canary.test.js`
+      `${projectRoot}/src/canary.test.js`
     );
     expect(results).toEqual({
       testFilenamePattern: 'src/**/*.test.js',
-      devDependencies: ['jest', 'jest-when'],
+      dependencies: {javascript: {development: ['jest', 'jest-when']}},
       scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
       eslintConfigs,
       eslint: {configs: eslintConfigs},

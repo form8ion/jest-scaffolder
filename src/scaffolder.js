@@ -1,20 +1,21 @@
-import {promises as fs} from 'fs';
-import path from 'path';
+import {promises as fs} from 'node:fs';
+import {resolve, dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-import makeDir from '../thirdparty-wrappers/make-dir.js';
+const __dirname = dirname(fileURLToPath(import.meta.url));          // eslint-disable-line no-underscore-dangle
 
 export default async function ({projectRoot}) {
   const eslintConfigs = ['jest'];
-  const createdSrcDirectory = await makeDir(`${projectRoot}/src`);
+  await fs.mkdir(`${projectRoot}/src`);
 
   await fs.copyFile(
-    path.resolve(__dirname, '..', 'templates', 'canary.test.js'),
-    `${createdSrcDirectory}/canary.test.js`
+    resolve(__dirname, '..', 'templates', 'canary.test.js'),
+    `${projectRoot}/src/canary.test.js`
   );
 
   return {
     testFilenamePattern: 'src/**/*.test.js',
-    devDependencies: ['jest', 'jest-when'],
+    dependencies: {javascript: {development: ['jest', 'jest-when']}},
     scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
     eslintConfigs,
     eslint: {configs: eslintConfigs},
