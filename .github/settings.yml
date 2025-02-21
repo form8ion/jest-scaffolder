@@ -2,5 +2,20 @@ _extends: .github
 repository:
   name: jest-scaffolder
   description: opinionated scaffolder for Jest
-  homepage: 'https://npm.im/@form8ion/jest-scaffolder'
+  homepage: https://npm.im/@form8ion/jest-scaffolder
   private: false
+branches:
+  - name: master
+    protection: null
+rulesets:
+  - name: prevent destruction of the default branch
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - ~DEFAULT_BRANCH
+        exclude: []
+    rules:
+      - type: deletion
+      - type: non_fast_forward
