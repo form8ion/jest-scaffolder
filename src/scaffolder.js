@@ -15,7 +15,7 @@ export default async function ({projectRoot}) {
 
   return {
     testFilenamePattern: 'src/**/*.test.js',
-    devDependencies: ['jest', 'jest-when'],
+    dependencies: {javascript: {development: ['jest', 'jest-when']}},
     scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
     eslintConfigs,
     eslint: {configs: eslintConfigs},

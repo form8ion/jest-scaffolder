@@ -3,7 +3,7 @@ import {fileURLToPath} from 'node:url';
 
 import any from '@travi/any';
 import {when} from 'jest-when';
-import {jest} from '@jest/globals';
+import {beforeEach, describe, expect, it, jest} from '@jest/globals';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));          // eslint-disable-line no-underscore-dangle
 
@@ -36,7 +36,7 @@ describe('scaffolder', () => {
     );
     expect(results).toEqual({
       testFilenamePattern: 'src/**/*.test.js',
-      devDependencies: ['jest', 'jest-when'],
+      dependencies: {javascript: {development: ['jest', 'jest-when']}},
       scripts: {'test:unit:base': 'DEBUG=any jest --testPathPattern=src/.*\\.test\\.js$'},
       eslintConfigs,
       eslint: {configs: eslintConfigs},
