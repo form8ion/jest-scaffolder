@@ -30,6 +30,7 @@ opinionated scaffolder for [Jest](https://jestjs.io)
 [![MIT license][license-badge]][license-link]
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/jest-scaffolder on RunKit][runkit-badge]][runkit-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -131,3 +132,5 @@ $ npm test
 [ossfScorecard-link]: https://securityscorecards.dev/viewer/?uri=github.com/form8ion/jest-scaffolder
 
 [ossfScorecard-badge]: https://api.securityscorecards.dev/projects/github.com/form8ion/jest-scaffolder/badge
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/jest-scaffolder?logo=node.js

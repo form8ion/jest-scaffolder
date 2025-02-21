@@ -4,13 +4,16 @@
   "license": "MIT",
   "version": "0.0.0-semantically-released",
   "type": "module",
+  "engines": {
+    "node": "^18.19.0 || ^20.9.0 || >=22.11.0"
+  },
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "form8ion/jest-scaffolder",
   "bugs": "https://github.com/form8ion/jest-scaffolder/issues",
   "homepage": "https://npm.im/@form8ion/jest-scaffolder",
   "runkitExampleFilename": "./example.js",
-  "main": "./lib/index.js",
   "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "sideEffects": false,
   "scripts": {
     "pretest": "run-s build",
@@ -32,7 +35,8 @@
     "lint:peer": "npm ls >/dev/null",
     "prepare": "husky install",
     "lint:publish": "publint --strict",
-    "lint:js:fix": "run-s 'lint:js -- --fix'"
+    "lint:js:fix": "run-s 'lint:js -- --fix'",
+    "lint:engines": "ls-engines"
   },
   "files": [
     "example.js",
@@ -59,6 +63,7 @@
     "jest": "29.7.0",
     "jest-when": "3.7.0",
     "lockfile-lint": "4.14.0",
+    "ls-engines": "0.9.3",
     "mock-fs": "5.5.0",
     "npm-run-all2": "7.0.2",
     "publint": "0.3.6",
