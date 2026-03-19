@@ -49,7 +49,7 @@
   },
   "packageManager": "npm@11.11.1+sha512.6ac6b30a876415dcf545e433ba4cb34bf0c3efbb86088a9415e446de0b5a4fc6fd511d277b59bd40e06e3204fbda28f5aeded346b3a8c780355b39ed31622e12",
   "devDependencies": {
-    "@form8ion/commitlint-config": "2.0.10",
+    "@form8ion/commitlint-config": "2.0.11",
     "@form8ion/eslint-config": "7.0.14",
     "@form8ion/eslint-config-jest": "1.0.126",
     "@form8ion/remark-lint-preset": "6.0.7",
